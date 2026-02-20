@@ -1,6 +1,6 @@
 name: project2
-on: push:
-job:
+on: push
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
