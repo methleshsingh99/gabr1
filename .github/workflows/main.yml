@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: Artifact upload
-        uses: action/upload-artifacts@v3
+        uses: actions/upload-artifact@v3
         with:
           name: artifact-1
           path: |
