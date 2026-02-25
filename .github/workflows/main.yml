@@ -1,21 +1,26 @@
 name: project2
 on: push
 jobs:
-  build:
+  checkout:
     runs-on: ubuntu-latest
     steps:
       - name: get code
         uses: actions/checkout@v3
+   setup:
       - name: Set up nodejs
         uses: actions/setup-node@v3
 
         with:
           node-version: 18
+    install-dep:
       - name: Install dependencies
         run: npm install
+    test:
       - name: Run tests
         run: npm test
+    build:
       - name: Build
         run: npm run build
+    deploy:
       - name: Deploy
         run: echo "Deploying to production server..."
